@@ -26,15 +26,15 @@ Procedure
 
 To start the httpd service, enter:
 
-# systemctl start httpd
+#systemctl start httpd
 To stop the httpd service, enter:
 
-# systemctl stop httpd
+ #systemctl stop httpd
 To restart the httpd service, enter:
 
-# systemctl restart httpd
+#systemctl restart httpd
 
-erification steps
+Verification steps
 
 Connect with a web browser to http://server_IP_or_host_name/.
 
