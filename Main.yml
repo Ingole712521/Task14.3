@@ -1,0 +1,35 @@
+- hosts: Redhat
+
+  tasks:
+  - name: Install web server software
+    package:
+      name: httpd
+      state: present
+
+  - name: Copy webpage
+    template:
+      dest: /var/www/html/
+      src: index.html
+
+  - name: Start the service
+    service:
+      name: httpd
+      state: started
+
+- hosts: ubuntu
+
+  tasks:
+  - name: Install web server software
+    package:
+      name: apache2
+      state: present
+
+  - name: Copy webpage
+    template:
+      dest: /var/www/html
+      src: index.html
+
+  - name: Start the service
+    service:
+      name: apache2
+      state: started
